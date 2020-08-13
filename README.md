@@ -1,6 +1,6 @@
 
 
-//initial commit
+//initial commit thyen my branch
 ## Advanced CSS and Intro to JavaScript
 
 ## Objects
