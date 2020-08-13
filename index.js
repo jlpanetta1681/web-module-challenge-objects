@@ -7,10 +7,16 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category){
-    /* Code here */
+return {name,cost,category};
 }
-
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+
+
+console.log(createMenuItem('Chicken_Sandwich', 6, 'Lunch'));
+console.log(createMenuItem('Grilled_Cheese', 4,'Lunch'));
+console.log(createMenuItem('Tomato_Soup', 10, 'Lunch,'));
+console.log(createMenuItem('Grilled_Chicken', 12, 'Lunch'));
 
 
 
@@ -21,8 +27,17 @@ Your method should accept:
 (1) A string (teacher, student, or public)
 
 and should return a number. 
-
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+ 
+burger.discount = function (str){
+if(str === 'teacher' || str === 'student'){
+ return burger.price * 0.75
+}
+if(str = "Public"){
+return burger.price.discount * 0.9
+}
+} 
+console.log(burger.discount("Teacher"));
 
 
 
@@ -136,3 +151,4 @@ function carMaker(/* code here */) {
     /* code here */
     
 }
+
