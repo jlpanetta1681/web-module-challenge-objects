@@ -29,13 +29,12 @@ Your method should accept:
 and should return a number. 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
  
-burger.discount = function (str){
-  str = str.toLowerCase
+burger.discount = function(str){
 if(str === 'teacher' || str === 'student'){
  return burger.price * 0.75
 }
 if(str = "public"){
-return burger.price.discount * 0.9
+return burger.prices * 0.9
 }
 
 } 
@@ -111,13 +110,18 @@ getLastReview(reviews)
   For example, invoking getReviewByRating(reviews, 4) would return [{name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
-*/
+*/                                                                                                                                                                                              
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+ function getReviewByRating(array, rating) {
+   const newarray = []
+   for(let i = 0; i < array.length; i++){
+     if(reviews[i].rating.includes(rating)){
+     return(newarray.unshift(reviews[i]))  
+     }
+    }
+ }
 
-  
+console.log(getReviewByRating(reviews, 4))  
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
 Your function should accept: 
